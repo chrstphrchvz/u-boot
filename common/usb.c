@@ -213,7 +213,7 @@ int usb_int_msg(struct usb_device *dev, unsigned long pipe,
 }
 
 /*
- * submits a control message and waits for comletion (at least timeout * 1ms)
+ * submits a control message and waits for completion (at least timeout * 1ms)
  * If timeout is 0, we don't wait for completion (used as example to set and
  * clear keyboards LEDs). For data transfers, (storage transfers) we don't
  * allow control messages with 0 timeout, by previousely resetting the flag
