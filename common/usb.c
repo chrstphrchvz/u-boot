@@ -243,7 +243,7 @@ int usb_control_msg(struct usb_device *dev, unsigned int pipe,
 	debug("usb_control_msg: request: 0x%X, requesttype: 0x%X, " \
 	      "value 0x%X index 0x%X length 0x%X\n",
 	      request, requesttype, value, index, size);
-	dev->status = USB_ST_NOT_PROC; /*not yet processed */
+	dev->status = USB_ST_NOT_PROC; /* not yet processed */
 
 	err = submit_control_msg(dev, pipe, data, size, setup_packet);
 	if (err < 0)
@@ -1096,7 +1096,7 @@ int usb_select_config(struct usb_device *dev)
 	 * Kingston DT Ultimate 32GB USB 3.0 seems to be extremely sensitive
 	 * about this first Get Descriptor request. If there are any other
 	 * requests in the first microframe, the stick crashes. Wait about
-	 * one microframe duration here (1mS for USB 1.x , 125uS for USB 2.0).
+	 * one microframe duration here (1ms for USB 1.x, 125us for USB 2.0).
 	 */
 	mdelay(1);
 
