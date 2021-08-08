@@ -1231,7 +1231,7 @@ static int dwc2_init_common(struct udevice *dev, struct dwc2_priv *priv)
 
 	/*
 	 * Add a 1 second delay here. This gives the host controller
-	 * a bit time before the comminucation with the USB devices
+	 * a bit time before the communication with the USB devices
 	 * is started (the bus is scanned) and  fixes the USB detection
 	 * problems with some problematic USB keys.
 	 */
