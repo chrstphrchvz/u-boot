@@ -182,7 +182,7 @@ __weak int usb_lock_async(struct usb_device *dev, int lock)
 
 /*
  * disables the asynch behaviour of the control message. This is used for data
- * transfers that uses the exclusiv access to the control and bulk messages.
+ * transfers that uses the exclusive access to the control and bulk messages.
  * Returns the old value so it can be restored later.
  */
 int usb_disable_asynch(int disable)
