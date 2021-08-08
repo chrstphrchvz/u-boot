@@ -1283,7 +1283,7 @@ int usb_lowlevel_init(int index, enum usb_init_type init, void **controller)
 	priv->aligned_buffer = aligned_buffer_addr;
 	priv->status_buffer = status_buffer_addr;
 
-	/* board-dependant init */
+	/* board-dependent init */
 	if (board_usb_init(index, USB_INIT_HOST))
 		return -1;
 
