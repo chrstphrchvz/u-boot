@@ -18,8 +18,8 @@ How it works:
 -------------
 
 The USB (at least the USB UHCI) needs a frame list (4k), transfer
-descripor and queue headers which are all located in the main memory.
-The UHCI allocates every milisecond the PCI bus and reads the current
+descriptor and queue headers which are all located in the main memory.
+The UHCI allocates every millisecond the PCI bus and reads the current
 frame pointer. This may cause to crash the OS during boot. So the USB
 _MUST_ be stopped during OS boot. This is the reason, why the USB is
 NOT automatically started during start-up. If someone needs the USB
@@ -43,7 +43,7 @@ Common USB Commands:
 		    an USB keyboard is assigned as stdin. The stdin
 		    is then switched to serial input.
 Storage USB Commands:
-- usb scan:	    scans the USB for storage devices.The USB must be
+- usb scan:	    scans the USB for storage devices. The USB must be
 		    running for this command (usb start)
 - usb device [dev]: show or set current USB storage device
 - usb part [dev]:   print partition table of one or all USB storage
@@ -57,7 +57,7 @@ Storage USB Commands:
 Config Switches:
 ----------------
 CONFIG_CMD_USB	    enables basic USB support and the usb command
-CONFIG_USB_UHCI	    defines the lowlevel part.A lowlevel part must be defined
+CONFIG_USB_UHCI	    defines the lowlevel part. A lowlevel part must be defined
 		    if using CONFIG_CMD_USB
 CONFIG_USB_KEYBOARD enables the USB Keyboard
 CONFIG_USB_STORAGE  enables the USB storage devices
@@ -90,7 +90,7 @@ their vendor and product IDs. You can check your device by connecting it
 to a Linux machine and typing 'lsusb'. The drivers are in
 drivers/usb/eth.
 
-For example this lsusb output line shows a device with Vendor ID 0x0x95
+For example this lsusb output line shows a device with Vendor ID 0x0b95
 and product ID 0x7720:
 
 Bus 002 Device 010: ID 0b95:7720 ASIX Electronics Corp. AX88772
@@ -211,8 +211,8 @@ MAC Addresses
 
 Most Ethernet dongles have a built-in MAC address which is unique in the
 world. This is important so that devices on the network can be
-distinguised from each other. MAC address conflicts are evil and
-generally result in strange and eratic behaviour.
+distinguished from each other. MAC address conflicts are evil and
+generally result in strange and erratic behaviour.
 
 Some boards have USB Ethernet chips on-board, and these sometimes do not
 have an assigned MAC address. In this case it is up to you to assign
