@@ -411,6 +411,7 @@ it would be possible to speed up enumeration in two ways:
 But in common cases the current algorithm is sufficient.
 
 Other things that need doing:
+
 - Convert usb_ether to use driver model as described above
 - Test that keyboards work (and convert to driver model)
 - Move the USB gadget framework to driver model
